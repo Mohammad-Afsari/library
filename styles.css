@@ -1,0 +1,60 @@
+body {
+    background-color: #051029;
+}
+
+#pageTitle {
+    font-size: 60px;
+    font-weight: bolder;
+    color: white;
+    text-decoration: underline;
+}
+
+#libraryIcon {
+    margin: 5px 0px 0px 5px;
+}
+
+.bookForm {
+    margin: 30px 0px 80px 0px;
+    border: 3px solid grey;
+    border-radius: 10px;
+}
+
+.addBook {
+    margin-left: 53px;
+    font-weight: bolder;
+    font-size: 15px;
+}
+
+.material-icons {
+    color: white;
+}
+
+th, td {
+    text-align: center;
+    color: white;
+}
+
+#addIcon {
+    margin-left: 10px;
+}
+
+table {
+    border: 3px solid gray;
+    border-radius: 10px;
+}
+
+#delete {
+    font-weight: bolder;
+}
+
+#delete:hover {
+    color:red;
+}
+
+#title, #author, #pages {
+    color: white;
+}
+
+thead {
+    border-bottom: 2px solid gray;
+}

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="styles.css">
 
@@ -13,44 +14,41 @@
 <body>
     <div class="container">
         <form class="bookForm">
+            <i class="large material-icons prefix" id="libraryIcon">library_books</i>
+            <label id="pageTitle">Library</label>
             <div class="row">
                   <div class="row">
                     <div class="input-field col s12">
-                      <input id="title" type="text" class="validate">
-                      <label for="title">Title</label>
+                        <i class="material-icons prefix">book</i>
+                        <input id="title" type="text" class="validate">
+                        <label for="title">Title</label>
                     </div>
                   </div>
                   <div class="row">
                     <div class="input-field col s12">
-                      <input id="author" type="text" class="validate">
-                      <label for="author">Author</label>
+                        <i class="material-icons prefix">account_box</i>
+                        <input id="author" type="text" class="validate">
+                        <label for="author">Author</label>
                     </div>
                   </div>
                   <div class="row">
                     <div class="input-field col s12">
-                      <input id="pages" type="number" class="validate">
-                      <label for="pages">Pages</label>
+                        <i class="material-icons prefix">last_page</i>
+                        <input id="pages" type="number" class="validate">
+                        <label for="pages">Pages</label>
                     </div>
                   </div>
               </div>
-            <div>
+              <div class="input-field col s12">
+                <i class="material-icons prefix" id="addIcon">library_add</i>
                 <input type="submit" value="Add Book" class="waves-effect waves-light btn addBook">
-            </div>
+              </div>
         </form>
         
 
-        <h1 class="result"></h1>
-        <div class="switch">
-            <label>
-                <input type="checkbox">
-                <span class="lever"></span>
-            </label>
-        </div>
-    
         <table>
             <thead>
               <tr>
-                  <th>#</th>
                   <th>Book</th>
                   <th>Author</th>
                   <th>Pages</th>
@@ -58,12 +56,11 @@
                   <th>Delete</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody id="bookRowParent">
               <tr class="bookRow">
-                <td>1</td>
                 <td>The Alchemist</td>
                 <td>Paulo Coehlo</td>
-                <td>297</td>
+                <td>163</td>
                 <td>        
                     <div class="switch">
                     <label>
@@ -72,7 +69,7 @@
                     </label>
                     </div>
                 </td>
-                <td>X</td>
+                <td id="delete">X</td>
               </tr>
             </tbody>
           </table>
