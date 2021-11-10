@@ -83,3 +83,18 @@ thead {
 #no:hover {
     background-color:red;
 }
+
+.page-footer {
+    margin-top: 120px;
+    background-color: #00050d;
+    text-align: center;
+}
+
+p, p a {
+    color: grey;
+}
+
+p a:hover {
+    color:white;
+}
+
