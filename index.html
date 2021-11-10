@@ -45,38 +45,59 @@
               </div>
         </form>
         
+        <div class="bookRecords">
+            <!-- Modal Trigger -->
+            <a class="waves-effect waves-light red btn modal-trigger" href="#modal1" id="deleteAll">Delete All Books</a>
+            <!-- Modal Structure -->
+            <div id="modal1" class="modal">
+                <div class="modal-content">
+                    <h4>Warning!</h4>
+                    <p>Are you sure you wish to delete all records?</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#!" class="modal-close waves-effect waves-green btn-flat" id="yes">Yes</a>
+                    <a href="#!" class="modal-close waves-effect waves-red btn-flat" id="no">No</a>
+                </div>
+            </div>
 
-        <table>
-            <thead>
-              <tr>
-                  <th>Book</th>
-                  <th>Author</th>
-                  <th>Pages</th>
-                  <th>Read</th>
-                  <th>Delete</th>
-              </tr>
-            </thead>
-            <tbody id="bookRowParent">
-              <tr class="bookRow">
-                <td>The Alchemist</td>
-                <td>Paulo Coehlo</td>
-                <td>163</td>
-                <td>        
-                    <div class="switch">
-                    <label>
-                        <input type="checkbox">
-                        <span class="lever"></span>
-                    </label>
-                    </div>
-                </td>
-                <td id="delete">X</td>
-              </tr>
-            </tbody>
-          </table>
+            <!-- Results -->
+            <table>
+                <thead>
+                <tr>
+                    <th>Book</th>
+                    <th>Author</th>
+                    <th>Pages</th>
+                    <th>Read</th>
+                    <th>Delete</th>
+                </tr>
+                </thead>
+                <tbody id="bookRowParent">
+                    <tr class="bookRow">
+                        <td>The Alchemist</td>
+                        <td>Paulo Coehlo</td>
+                        <td>163</td>
+                        <td>        
+                            <div class="switch">
+                            <label>
+                                <input type="checkbox">
+                                <span class="lever"></span>
+                            </label>
+                            </div>
+                        </td>
+                        <td id="delete"><i class="material-icons prefix" id="deleteButton">delete</i></td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
     </div>
     
+
+  
+
     <script src="app.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
+    <script></script>
 </body>
 </html>

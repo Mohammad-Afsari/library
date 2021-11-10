@@ -1,5 +1,7 @@
 
+// Run functions
 deleteBook()
+deleteAllBooks()
 
 // Get buttons
 const bookForm = document.querySelector(".bookForm")
@@ -21,11 +23,6 @@ function Book(title, author, pages, read) {
 // Book form to submit
 bookForm.addEventListener("submit", function(e) {
     e.preventDefault()
-
-    console.log(bookTitle.value)
-    console.log(bookAuthor.value)
-    console.log(bookPages.value)
-    console.log("Hello form is submitted!")
     addBookToLibrary()
 })
 
@@ -33,8 +30,6 @@ bookForm.addEventListener("submit", function(e) {
 function addBookToLibrary() {
     let newBook = new Book(bookTitle.value, bookAuthor.value, bookPages.value)
     library.push(newBook)
-    console.log(library)
-    console.log(newBook)
     
     // Table row parent where the new books will go
     const bookTableParent = document.getElementById("bookRowParent")
@@ -58,7 +53,7 @@ function addBookToLibrary() {
                 </label>
             </div>
         </td>
-        <td id="delete">X</td>
+        <td id="delete"><i class="material-icons prefix" id="deleteButton">delete</i></td>
         `
         bookTableParent.appendChild(newTableRow)
     }
@@ -77,10 +72,35 @@ function deleteBook() {
     let delBook = document.querySelector("#bookRowParent")
 
     delBook.addEventListener("click", function(e){
-        if (e.target.id === "delete") {
-            e.target.parentElement.innerHTML = ''
+        if (e.target.parentElement.id === "delete") {
+            e.target.parentElement.parentElement.innerHTML = ''
         }
+        
     })
 }
 
+
+// Delete modal confirmation
+function deleteAllBooks() {
+    // Obtain element
+    let delAllBooks = document.querySelector(".bookRecords")
+    let bookRows = document.getElementById("bookRowParent")
+
+    delAllBooks.addEventListener("click", function(e){
+        if (e.target.id === 'yes') {
+            bookRows.innerHTML = ''
+        }
+    })   
+}
+
+
+// Delete modal confirmation
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.modal');
+    var instances = M.Modal.init(elems, 0.5);
+  });
+
+
+
 // ========================================================== TESTING AREA ===================================================================== \\ 
+
