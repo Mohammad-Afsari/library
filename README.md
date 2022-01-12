@@ -3,7 +3,7 @@
 <br />
 <p align="center">
    <a href="https://github.com/Mohammad-Afsari/library">
-      <img src="img/logo.PNG" alt="Rock" width="400" height="400">
+      <img src="img/logo.PNG" alt="Librarygif" width="400" height="400">
    </a>
 
   <p align="center">
